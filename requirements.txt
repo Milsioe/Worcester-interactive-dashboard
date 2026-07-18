@@ -1,0 +1,12 @@
+streamlit
+streamlit-folium
+folium
+geopandas
+pandas
+plotly
+shapely
+streamlit
+   pandas
+   streamlit
+   pandas
+   

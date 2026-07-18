@@ -1,0 +1,2710 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8dd6f684125496440f4068c29b7935a2 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<div style="position: fixed; bottom: 30px; left: 30px; z-index: 9999;
+     background: white; padding: 10px 14px; border:1px solid #999; border-radius:6px;
+     font-size:13px;">
+  <b>Community Resources</b><br>
+  <span style="color:blue;">&#9679;</span> Schools<br>
+  <span style="color:red;">&#9679;</span> Hospitals<br>
+  <span style="color:green;">&#9679;</span> Churches<br>
+  <span style="color:orange;">&#9679;</span> YMCA / Recreation
+</div>
+    
+            <div class="folium-map" id="map_8dd6f684125496440f4068c29b7935a2" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_8dd6f684125496440f4068c29b7935a2 = L.map(
+                "map_8dd6f684125496440f4068c29b7935a2",
+                {
+                    center: [42.2626, -71.8023],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_9622ff4f795a5ee159d562b8075bb09f = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_9622ff4f795a5ee159d562b8075bb09f.addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+            var circle_marker_9e0a579231586b4403839cda16a433ff = L.circleMarker(
+                [42.243288699999994, -71.8226407],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_aa3b37795d407ed8e05f8da1cbd1dfa2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_99389e5cba33242caa7efddeecdda2fc = $(`<div id="html_99389e5cba33242caa7efddeecdda2fc" style="width: 100.0%; height: 100.0%;">School: Central Massachusetts SPED Collaborative - Woodward Day School</div>`)[0];
+                popup_aa3b37795d407ed8e05f8da1cbd1dfa2.setContent(html_99389e5cba33242caa7efddeecdda2fc);
+            
+        
+
+        circle_marker_9e0a579231586b4403839cda16a433ff.bindPopup(popup_aa3b37795d407ed8e05f8da1cbd1dfa2)
+        ;
+
+        
+    
+    
+            var circle_marker_4aee0cfe92559a93074c9da6f2829a45 = L.circleMarker(
+                [42.2967272, -71.7888168],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_7bc6029af40a7d2b5e61abf57db4d0be = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7747ef18ac983086f0efdc27c95476df = $(`<div id="html_7747ef18ac983086f0efdc27c95476df" style="width: 100.0%; height: 100.0%;">School: Burncoat Middle School</div>`)[0];
+                popup_7bc6029af40a7d2b5e61abf57db4d0be.setContent(html_7747ef18ac983086f0efdc27c95476df);
+            
+        
+
+        circle_marker_4aee0cfe92559a93074c9da6f2829a45.bindPopup(popup_7bc6029af40a7d2b5e61abf57db4d0be)
+        ;
+
+        
+    
+    
+            var circle_marker_28eda3f47426ab15b5a809d27889d27f = L.circleMarker(
+                [42.2764079, -71.7999251],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_0489455622e99ef673339c0e23231a3a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a848a22592dcb1e4ac5918ee323bc0d2 = $(`<div id="html_a848a22592dcb1e4ac5918ee323bc0d2" style="width: 100.0%; height: 100.0%;">School: Ma Academy for Math and Science School</div>`)[0];
+                popup_0489455622e99ef673339c0e23231a3a.setContent(html_a848a22592dcb1e4ac5918ee323bc0d2);
+            
+        
+
+        circle_marker_28eda3f47426ab15b5a809d27889d27f.bindPopup(popup_0489455622e99ef673339c0e23231a3a)
+        ;
+
+        
+    
+    
+            var circle_marker_dd1b292295fdb24c659b6c6d2cd0c11b = L.circleMarker(
+                [42.2720648, -71.8238042],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_b37448bc8f48161506a8facdbf81d3b4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5b07b351cb4a932595e039c5bb706201 = $(`<div id="html_5b07b351cb4a932595e039c5bb706201" style="width: 100.0%; height: 100.0%;">School: Yeshiva Hebrew Day Academy</div>`)[0];
+                popup_b37448bc8f48161506a8facdbf81d3b4.setContent(html_5b07b351cb4a932595e039c5bb706201);
+            
+        
+
+        circle_marker_dd1b292295fdb24c659b6c6d2cd0c11b.bindPopup(popup_b37448bc8f48161506a8facdbf81d3b4)
+        ;
+
+        
+    
+    
+            var circle_marker_1e4e69c9ae373e12c4c056e79c140136 = L.circleMarker(
+                [42.27450449999999, -71.85563169999999],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_7d0cf4186e45cf5496c131098146eaed = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c26e0e082c686163436bbd8cb97d80d1 = $(`<div id="html_c26e0e082c686163436bbd8cb97d80d1" style="width: 100.0%; height: 100.0%;">School: Seventh Day Adventist School</div>`)[0];
+                popup_7d0cf4186e45cf5496c131098146eaed.setContent(html_c26e0e082c686163436bbd8cb97d80d1);
+            
+        
+
+        circle_marker_1e4e69c9ae373e12c4c056e79c140136.bindPopup(popup_7d0cf4186e45cf5496c131098146eaed)
+        ;
+
+        
+    
+    
+            var circle_marker_ac3926557c0dba9d14cf3027ca66043f = L.circleMarker(
+                [42.3154391, -71.7738276],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_a214b3ddfec6148f02796a2c33662db7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_34faa338bf200999c0342757a1bd2f6a = $(`<div id="html_34faa338bf200999c0342757a1bd2f6a" style="width: 100.0%; height: 100.0%;">School: Alhuda Academy</div>`)[0];
+                popup_a214b3ddfec6148f02796a2c33662db7.setContent(html_34faa338bf200999c0342757a1bd2f6a);
+            
+        
+
+        circle_marker_ac3926557c0dba9d14cf3027ca66043f.bindPopup(popup_a214b3ddfec6148f02796a2c33662db7)
+        ;
+
+        
+    
+    
+            var circle_marker_d25222d8e1daa5023b218e1f4a5adc62 = L.circleMarker(
+                [42.265433, -71.8021663],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_a41aaaf8eb83af59a29d494a89956374 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6d4bd4dce646f12bca95479d82c2b445 = $(`<div id="html_6d4bd4dce646f12bca95479d82c2b445" style="width: 100.0%; height: 100.0%;">School: G Stanley Hall School/The Bridge of Central MA</div>`)[0];
+                popup_a41aaaf8eb83af59a29d494a89956374.setContent(html_6d4bd4dce646f12bca95479d82c2b445);
+            
+        
+
+        circle_marker_d25222d8e1daa5023b218e1f4a5adc62.bindPopup(popup_a41aaaf8eb83af59a29d494a89956374)
+        ;
+
+        
+    
+    
+            var circle_marker_32a6129c12f6ae5308681533d9bc4550 = L.circleMarker(
+                [42.238754799999995, -71.76692399999999],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_48db7e9751357b89e9a4b463cf247446 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f694df53b91a59088a3b0a91dbd3516b = $(`<div id="html_f694df53b91a59088a3b0a91dbd3516b" style="width: 100.0%; height: 100.0%;">School: Happy Day Child Care Ctr</div>`)[0];
+                popup_48db7e9751357b89e9a4b463cf247446.setContent(html_f694df53b91a59088a3b0a91dbd3516b);
+            
+        
+
+        circle_marker_32a6129c12f6ae5308681533d9bc4550.bindPopup(popup_48db7e9751357b89e9a4b463cf247446)
+        ;
+
+        
+    
+    
+            var circle_marker_987a90c9341eeb87e4de2cd81b28154a = L.circleMarker(
+                [42.231367199999994, -71.8255713],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_a4224357502257e2e74ea9cfb5f05c61 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8c3448e1ca780e80b4e7720917e46a71 = $(`<div id="html_8c3448e1ca780e80b4e7720917e46a71" style="width: 100.0%; height: 100.0%;">School: Seven Hills Foundation</div>`)[0];
+                popup_a4224357502257e2e74ea9cfb5f05c61.setContent(html_8c3448e1ca780e80b4e7720917e46a71);
+            
+        
+
+        circle_marker_987a90c9341eeb87e4de2cd81b28154a.bindPopup(popup_a4224357502257e2e74ea9cfb5f05c61)
+        ;
+
+        
+    
+    
+            var circle_marker_55a2bc79040c6fcdb145a1482371479e = L.circleMarker(
+                [42.2420893, -71.7839954],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_f10d52799d0e3611f17aef1b5c5082e9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c7ed1c549fe9576bbf8aa0f44e790cd8 = $(`<div id="html_c7ed1c549fe9576bbf8aa0f44e790cd8" style="width: 100.0%; height: 100.0%;">School: Saint Paul Diocesan Junior/Senior High School</div>`)[0];
+                popup_f10d52799d0e3611f17aef1b5c5082e9.setContent(html_c7ed1c549fe9576bbf8aa0f44e790cd8);
+            
+        
+
+        circle_marker_55a2bc79040c6fcdb145a1482371479e.bindPopup(popup_f10d52799d0e3611f17aef1b5c5082e9)
+        ;
+
+        
+    
+    
+            var circle_marker_6d54712c508a67b703b1099142995499 = L.circleMarker(
+                [42.30482349999999, -71.814819],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_8b43be1f672b64807a38263e4e484079 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d3c4b503d5ec8db1d7e8734d2085c314 = $(`<div id="html_d3c4b503d5ec8db1d7e8734d2085c314" style="width: 100.0%; height: 100.0%;">School: Bancroft School</div>`)[0];
+                popup_8b43be1f672b64807a38263e4e484079.setContent(html_d3c4b503d5ec8db1d7e8734d2085c314);
+            
+        
+
+        circle_marker_6d54712c508a67b703b1099142995499.bindPopup(popup_8b43be1f672b64807a38263e4e484079)
+        ;
+
+        
+    
+    
+            var circle_marker_3a9add8d2f23107492eac7819fbde0e2 = L.circleMarker(
+                [42.27053620000001, -71.7914097],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_b66712d684829b2551abe04559c84920 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b54db34353db9f718368665eb436c6bf = $(`<div id="html_b54db34353db9f718368665eb436c6bf" style="width: 100.0%; height: 100.0%;">School: Venerini Academy</div>`)[0];
+                popup_b66712d684829b2551abe04559c84920.setContent(html_b54db34353db9f718368665eb436c6bf);
+            
+        
+
+        circle_marker_3a9add8d2f23107492eac7819fbde0e2.bindPopup(popup_b66712d684829b2551abe04559c84920)
+        ;
+
+        
+    
+    
+            var circle_marker_eb9ee5771b9e7a7e8bece16da57ded80 = L.circleMarker(
+                [42.299696499999996, -71.8260614],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_89bfc0cab65f3179c8a670376899ed96 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a61bbc80ffdf0a8c0a21cb076d8f8f89 = $(`<div id="html_a61bbc80ffdf0a8c0a21cb076d8f8f89" style="width: 100.0%; height: 100.0%;">School: Mercy Centre</div>`)[0];
+                popup_89bfc0cab65f3179c8a670376899ed96.setContent(html_a61bbc80ffdf0a8c0a21cb076d8f8f89);
+            
+        
+
+        circle_marker_eb9ee5771b9e7a7e8bece16da57ded80.bindPopup(popup_89bfc0cab65f3179c8a670376899ed96)
+        ;
+
+        
+    
+    
+            var circle_marker_14bfbafdb4269fb65a668ed3ff7378ac = L.circleMarker(
+                [42.2443643, -71.84145559999999],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_a0bcacd8094180241c6092a949c14571 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6c40c590d3d200078b5566607b55bed9 = $(`<div id="html_6c40c590d3d200078b5566607b55bed9" style="width: 100.0%; height: 100.0%;">School: Our Lady of the Angels School</div>`)[0];
+                popup_a0bcacd8094180241c6092a949c14571.setContent(html_6c40c590d3d200078b5566607b55bed9);
+            
+        
+
+        circle_marker_14bfbafdb4269fb65a668ed3ff7378ac.bindPopup(popup_a0bcacd8094180241c6092a949c14571)
+        ;
+
+        
+    
+    
+            var circle_marker_e27cc83e3852986acf29d2938f72d516 = L.circleMarker(
+                [42.244537799999996, -71.8075713],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_7c9c838b83432aeda5b07b6b77d4c1d3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_87b1506dba6e26cd9129f5095957d53a = $(`<div id="html_87b1506dba6e26cd9129f5095957d53a" style="width: 100.0%; height: 100.0%;">School: Sacred Heart School</div>`)[0];
+                popup_7c9c838b83432aeda5b07b6b77d4c1d3.setContent(html_87b1506dba6e26cd9129f5095957d53a);
+            
+        
+
+        circle_marker_e27cc83e3852986acf29d2938f72d516.bindPopup(popup_7c9c838b83432aeda5b07b6b77d4c1d3)
+        ;
+
+        
+    
+    
+            var circle_marker_0f1e8a394c96a6fe6dc0b1081e672a5a = L.circleMarker(
+                [42.3034261, -71.8003491],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_4708589454d12228c36b34266a93d6ce = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b80a8e250952f40a2b48d8902aecc35d = $(`<div id="html_b80a8e250952f40a2b48d8902aecc35d" style="width: 100.0%; height: 100.0%;">School: Andover Street School</div>`)[0];
+                popup_4708589454d12228c36b34266a93d6ce.setContent(html_b80a8e250952f40a2b48d8902aecc35d);
+            
+        
+
+        circle_marker_0f1e8a394c96a6fe6dc0b1081e672a5a.bindPopup(popup_4708589454d12228c36b34266a93d6ce)
+        ;
+
+        
+    
+    
+            var circle_marker_f2f56b2baf35bf6b999c92495ade00e3 = L.circleMarker(
+                [42.2979461, -71.78878],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_880517ce62a2a3aa20d971782fc36dae = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_66c909148758776a46738df68aa97e1a = $(`<div id="html_66c909148758776a46738df68aa97e1a" style="width: 100.0%; height: 100.0%;">School: Burncoat High School</div>`)[0];
+                popup_880517ce62a2a3aa20d971782fc36dae.setContent(html_66c909148758776a46738df68aa97e1a);
+            
+        
+
+        circle_marker_f2f56b2baf35bf6b999c92495ade00e3.bindPopup(popup_880517ce62a2a3aa20d971782fc36dae)
+        ;
+
+        
+    
+    
+            var circle_marker_1e5915b0047085a05cbf7da9719f1af1 = L.circleMarker(
+                [42.309259399999995, -71.79812689999999],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_f3472cf4563ede9523e412ed4fa8fc5c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0fafbadbceeed5b20fdf8f59478f21fa = $(`<div id="html_0fafbadbceeed5b20fdf8f59478f21fa" style="width: 100.0%; height: 100.0%;">School: Greendale School</div>`)[0];
+                popup_f3472cf4563ede9523e412ed4fa8fc5c.setContent(html_0fafbadbceeed5b20fdf8f59478f21fa);
+            
+        
+
+        circle_marker_1e5915b0047085a05cbf7da9719f1af1.bindPopup(popup_f3472cf4563ede9523e412ed4fa8fc5c)
+        ;
+
+        
+    
+    
+            var circle_marker_3851922131a8413db8ecb10715cda8ec = L.circleMarker(
+                [42.3139816, -71.7953491],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_56264b2752e1bfb366b640bb9143c093 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_edc561b0cc597e63221de40c65026764 = $(`<div id="html_edc561b0cc597e63221de40c65026764" style="width: 100.0%; height: 100.0%;">School: Assumption Preparatory School</div>`)[0];
+                popup_56264b2752e1bfb366b640bb9143c093.setContent(html_edc561b0cc597e63221de40c65026764);
+            
+        
+
+        circle_marker_3851922131a8413db8ecb10715cda8ec.bindPopup(popup_56264b2752e1bfb366b640bb9143c093)
+        ;
+
+        
+    
+    
+            var circle_marker_1179894692bcde77a56974e6480d0a2e = L.circleMarker(
+                [42.261204299999996, -71.8072935],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_d56f0a765156a430c4c269a7ea66088a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7bb0f000e499a4348a36b2259467209e = $(`<div id="html_7bb0f000e499a4348a36b2259467209e" style="width: 100.0%; height: 100.0%;">School: Saint Pauls School</div>`)[0];
+                popup_d56f0a765156a430c4c269a7ea66088a.setContent(html_7bb0f000e499a4348a36b2259467209e);
+            
+        
+
+        circle_marker_1179894692bcde77a56974e6480d0a2e.bindPopup(popup_d56f0a765156a430c4c269a7ea66088a)
+        ;
+
+        
+    
+    
+            var circle_marker_2a6d5194278101a9a6b69d5515a2c582 = L.circleMarker(
+                [42.2917594, -71.828683],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_d7359929e4720b2f17f24ec93805c0f3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a73e86835868731a404a04ca179589e4 = $(`<div id="html_a73e86835868731a404a04ca179589e4" style="width: 100.0%; height: 100.0%;">School: Assumption University</div>`)[0];
+                popup_d7359929e4720b2f17f24ec93805c0f3.setContent(html_a73e86835868731a404a04ca179589e4);
+            
+        
+
+        circle_marker_2a6d5194278101a9a6b69d5515a2c582.bindPopup(popup_d7359929e4720b2f17f24ec93805c0f3)
+        ;
+
+        
+    
+    
+            var circle_marker_1b73adaff0d3815797a5ddd1b46564d3 = L.circleMarker(
+                [42.258426199999995, -71.8495165],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_33d42b7271b76447d2f7f41da3d906be = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e0bb671d51a57fb425aebe1848015a2f = $(`<div id="html_e0bb671d51a57fb425aebe1848015a2f" style="width: 100.0%; height: 100.0%;">School: Mill Swan School</div>`)[0];
+                popup_33d42b7271b76447d2f7f41da3d906be.setContent(html_e0bb671d51a57fb425aebe1848015a2f);
+            
+        
+
+        circle_marker_1b73adaff0d3815797a5ddd1b46564d3.bindPopup(popup_33d42b7271b76447d2f7f41da3d906be)
+        ;
+
+        
+    
+    
+            var circle_marker_61fccfd5c852e33f03ff2b034606bcad = L.circleMarker(
+                [42.236482699999996, -71.7653481],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_61cf377f3c92edfd72b2735482ac7070 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d263ae32451cda6a809ad9fe46374554 = $(`<div id="html_d263ae32451cda6a809ad9fe46374554" style="width: 100.0%; height: 100.0%;">School: Happy Day Child Care Center</div>`)[0];
+                popup_61cf377f3c92edfd72b2735482ac7070.setContent(html_d263ae32451cda6a809ad9fe46374554);
+            
+        
+
+        circle_marker_61fccfd5c852e33f03ff2b034606bcad.bindPopup(popup_61cf377f3c92edfd72b2735482ac7070)
+        ;
+
+        
+    
+    
+            var circle_marker_f60a4240fdb9920b8a25a6a304482ba1 = L.circleMarker(
+                [42.3139816, -71.7950714],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_d155bf6bf280ce2f8ac49e7fc86fffe6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1692b90fef58a465a5c1909f4d054341 = $(`<div id="html_1692b90fef58a465a5c1909f4d054341" style="width: 100.0%; height: 100.0%;">School: Quinsigamond Community College</div>`)[0];
+                popup_d155bf6bf280ce2f8ac49e7fc86fffe6.setContent(html_1692b90fef58a465a5c1909f4d054341);
+            
+        
+
+        circle_marker_f60a4240fdb9920b8a25a6a304482ba1.bindPopup(popup_d155bf6bf280ce2f8ac49e7fc86fffe6)
+        ;
+
+        
+    
+    
+            var circle_marker_5aa3d715188524842f387d2b192476b6 = L.circleMarker(
+                [42.253376199999984, -71.8152751],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_7707478ba87129d27a94709b5ce06ccd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_46cf4d469849e3add710b2cfb830e874 = $(`<div id="html_46cf4d469849e3add710b2cfb830e874" style="width: 100.0%; height: 100.0%;">School: St. Peter Central Catholic Elementary School</div>`)[0];
+                popup_7707478ba87129d27a94709b5ce06ccd.setContent(html_46cf4d469849e3add710b2cfb830e874);
+            
+        
+
+        circle_marker_5aa3d715188524842f387d2b192476b6.bindPopup(popup_7707478ba87129d27a94709b5ce06ccd)
+        ;
+
+        
+    
+    
+            var circle_marker_414ebeaabda25a11562f45b68518e05c = L.circleMarker(
+                [42.2945546, -71.8391226],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_34386fe24f94f94e3b47f43945f58c50 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_54bfda5de45e684a55f7d4a87bc5b07d = $(`<div id="html_54bfda5de45e684a55f7d4a87bc5b07d" style="width: 100.0%; height: 100.0%;">School: Worcester JCC Preschool</div>`)[0];
+                popup_34386fe24f94f94e3b47f43945f58c50.setContent(html_54bfda5de45e684a55f7d4a87bc5b07d);
+            
+        
+
+        circle_marker_414ebeaabda25a11562f45b68518e05c.bindPopup(popup_34386fe24f94f94e3b47f43945f58c50)
+        ;
+
+        
+    
+    
+            var circle_marker_308136cd8ad92e1194b404fb50f10f07 = L.circleMarker(
+                [42.2544218, -71.8186048],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_060bb34356ea67a6e5f41ea97f82c702 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_421c72092dfb8515c39f0b33d47e9521 = $(`<div id="html_421c72092dfb8515c39f0b33d47e9521" style="width: 100.0%; height: 100.0%;">School: Woodland Academy</div>`)[0];
+                popup_060bb34356ea67a6e5f41ea97f82c702.setContent(html_421c72092dfb8515c39f0b33d47e9521);
+            
+        
+
+        circle_marker_308136cd8ad92e1194b404fb50f10f07.bindPopup(popup_060bb34356ea67a6e5f41ea97f82c702)
+        ;
+
+        
+    
+    
+            var circle_marker_ec052d493902dd272e4e32a18782f1e2 = L.circleMarker(
+                [42.277240519025554, -71.77777705342602],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_58bc65c9cffceac9ae72c277e1967ffb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3eec9d23bc8deffcad6449378f8365d6 = $(`<div id="html_3eec9d23bc8deffcad6449378f8365d6" style="width: 100.0%; height: 100.0%;">School: Worcester Technical High School</div>`)[0];
+                popup_58bc65c9cffceac9ae72c277e1967ffb.setContent(html_3eec9d23bc8deffcad6449378f8365d6);
+            
+        
+
+        circle_marker_ec052d493902dd272e4e32a18782f1e2.bindPopup(popup_58bc65c9cffceac9ae72c277e1967ffb)
+        ;
+
+        
+    
+    
+            var circle_marker_f4ba7c8b850b44491b3558e323180b22 = L.circleMarker(
+                [42.25084807478592, -71.79096607282187],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_82a3427ab91de053385d21da7202ebf5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7e454b2a2ecd50e05a19561cb460c05c = $(`<div id="html_7e454b2a2ecd50e05a19561cb460c05c" style="width: 100.0%; height: 100.0%;">School: Worcester Academy</div>`)[0];
+                popup_82a3427ab91de053385d21da7202ebf5.setContent(html_7e454b2a2ecd50e05a19561cb460c05c);
+            
+        
+
+        circle_marker_f4ba7c8b850b44491b3558e323180b22.bindPopup(popup_82a3427ab91de053385d21da7202ebf5)
+        ;
+
+        
+    
+    
+            var circle_marker_6abf826a98f1fc762ea45a207931c9e0 = L.circleMarker(
+                [42.2914535850589, -71.78933347312072],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_7d31e8b11cdaee93773783a903f51cc1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d8a69223fd8cc2c9c222617c3f558078 = $(`<div id="html_d8a69223fd8cc2c9c222617c3f558078" style="width: 100.0%; height: 100.0%;">School: Wawecus Road School</div>`)[0];
+                popup_7d31e8b11cdaee93773783a903f51cc1.setContent(html_d8a69223fd8cc2c9c222617c3f558078);
+            
+        
+
+        circle_marker_6abf826a98f1fc762ea45a207931c9e0.bindPopup(popup_7d31e8b11cdaee93773783a903f51cc1)
+        ;
+
+        
+    
+    
+            var circle_marker_9fc49ddcce8183c0d42398b7c61d12c8 = L.circleMarker(
+                [42.28450293827674, -71.86958198748606],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_0a9c921ca5db23325ff0467fcfcb1dfe = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ddd8c26df676d062cb344eeb24669cd1 = $(`<div id="html_ddd8c26df676d062cb344eeb24669cd1" style="width: 100.0%; height: 100.0%;">School: West Tatnuck School</div>`)[0];
+                popup_0a9c921ca5db23325ff0467fcfcb1dfe.setContent(html_ddd8c26df676d062cb344eeb24669cd1);
+            
+        
+
+        circle_marker_9fc49ddcce8183c0d42398b7c61d12c8.bindPopup(popup_0a9c921ca5db23325ff0467fcfcb1dfe)
+        ;
+
+        
+    
+    
+            var circle_marker_75b4ff1f2ebe6026e31f461faf542a15 = L.circleMarker(
+                [42.286808828921025, -71.81332677011623],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_8bb84ad12caa27293d7da8badd2b9d9b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_95dafc3f32c2fe25a82eaa1d2120c899 = $(`<div id="html_95dafc3f32c2fe25a82eaa1d2120c899" style="width: 100.0%; height: 100.0%;">School: Worcester Public Schools</div>`)[0];
+                popup_8bb84ad12caa27293d7da8badd2b9d9b.setContent(html_95dafc3f32c2fe25a82eaa1d2120c899);
+            
+        
+
+        circle_marker_75b4ff1f2ebe6026e31f461faf542a15.bindPopup(popup_8bb84ad12caa27293d7da8badd2b9d9b)
+        ;
+
+        
+    
+    
+            var circle_marker_eaad242c9b58e854cc955bc9c83d0587 = L.circleMarker(
+                [42.2585269087978, -71.84977081035042],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_5be3465bc726666669eabe52511a36f5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1251f02d11aa7f95813580d47a322fa9 = $(`<div id="html_1251f02d11aa7f95813580d47a322fa9" style="width: 100.0%; height: 100.0%;">School: nan</div>`)[0];
+                popup_5be3465bc726666669eabe52511a36f5.setContent(html_1251f02d11aa7f95813580d47a322fa9);
+            
+        
+
+        circle_marker_eaad242c9b58e854cc955bc9c83d0587.bindPopup(popup_5be3465bc726666669eabe52511a36f5)
+        ;
+
+        
+    
+    
+            var circle_marker_5f88a3c5d19abcd0f72ba7c4a088b81b = L.circleMarker(
+                [42.299741496597505, -71.82599830254085],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_eaab817f2da4cf169c6d62cdc634d4a3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_910766f5e39533f5bfd0a17c7442cc67 = $(`<div id="html_910766f5e39533f5bfd0a17c7442cc67" style="width: 100.0%; height: 100.0%;">School: nan</div>`)[0];
+                popup_eaab817f2da4cf169c6d62cdc634d4a3.setContent(html_910766f5e39533f5bfd0a17c7442cc67);
+            
+        
+
+        circle_marker_5f88a3c5d19abcd0f72ba7c4a088b81b.bindPopup(popup_eaab817f2da4cf169c6d62cdc634d4a3)
+        ;
+
+        
+    
+    
+            var circle_marker_b1febee0a5bbfaae9e6b655bf23b8d5f = L.circleMarker(
+                [42.29931171183187, -71.82599689126585],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_6bf61694cb6d5a022183cd1f0c01621d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d08f518534531c81588d065b47f7f612 = $(`<div id="html_d08f518534531c81588d065b47f7f612" style="width: 100.0%; height: 100.0%;">School: nan</div>`)[0];
+                popup_6bf61694cb6d5a022183cd1f0c01621d.setContent(html_d08f518534531c81588d065b47f7f612);
+            
+        
+
+        circle_marker_b1febee0a5bbfaae9e6b655bf23b8d5f.bindPopup(popup_6bf61694cb6d5a022183cd1f0c01621d)
+        ;
+
+        
+    
+    
+            var circle_marker_77a9bf5c8604f1edebc5e742db659c18 = L.circleMarker(
+                [42.29526908231103, -71.8392437304455],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_25b3c2e8481e26478eab05626ea53139 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_54ea625f65662938089a3ce23ea6ee80 = $(`<div id="html_54ea625f65662938089a3ce23ea6ee80" style="width: 100.0%; height: 100.0%;">School: nan</div>`)[0];
+                popup_25b3c2e8481e26478eab05626ea53139.setContent(html_54ea625f65662938089a3ce23ea6ee80);
+            
+        
+
+        circle_marker_77a9bf5c8604f1edebc5e742db659c18.bindPopup(popup_25b3c2e8481e26478eab05626ea53139)
+        ;
+
+        
+    
+    
+            var circle_marker_26eb1207cefb83c15b364a9a79e07d6b = L.circleMarker(
+                [42.246976976048245, -71.82521978685773],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_be94ff97c02e81c8ac39983ea1a8727e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_31da460e0f0475c0c86060f0c3fede9e = $(`<div id="html_31da460e0f0475c0c86060f0c3fede9e" style="width: 100.0%; height: 100.0%;">School: University Park Campus School</div>`)[0];
+                popup_be94ff97c02e81c8ac39983ea1a8727e.setContent(html_31da460e0f0475c0c86060f0c3fede9e);
+            
+        
+
+        circle_marker_26eb1207cefb83c15b364a9a79e07d6b.bindPopup(popup_be94ff97c02e81c8ac39983ea1a8727e)
+        ;
+
+        
+    
+    
+            var circle_marker_834438832ce77d876eb804fcb361dc0d = L.circleMarker(
+                [42.25111648434619, -71.79759165625697],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_feca0aa35d62aaf99478864826651f80 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_59d263c62309b3aa6eb5d7ef284118f2 = $(`<div id="html_59d263c62309b3aa6eb5d7ef284118f2" style="width: 100.0%; height: 100.0%;">School: Saint Mary's Central Catholic High School</div>`)[0];
+                popup_feca0aa35d62aaf99478864826651f80.setContent(html_59d263c62309b3aa6eb5d7ef284118f2);
+            
+        
+
+        circle_marker_834438832ce77d876eb804fcb361dc0d.bindPopup(popup_feca0aa35d62aaf99478864826651f80)
+        ;
+
+        
+    
+    
+            var circle_marker_22bab71926d83adede0426f7d0e54495 = L.circleMarker(
+                [42.251131924194794, -71.79676028911531],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_6e771379ec84135f8417e767bdb990a4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7af33161b8e9bcfcfb992918fb14af72 = $(`<div id="html_7af33161b8e9bcfcfb992918fb14af72" style="width: 100.0%; height: 100.0%;">School: Saint Marys Central Elementary School</div>`)[0];
+                popup_6e771379ec84135f8417e767bdb990a4.setContent(html_7af33161b8e9bcfcfb992918fb14af72);
+            
+        
+
+        circle_marker_22bab71926d83adede0426f7d0e54495.bindPopup(popup_6e771379ec84135f8417e767bdb990a4)
+        ;
+
+        
+    
+    
+            var circle_marker_c5472b9d9e5a03fde688c3f4e06ad6d7 = L.circleMarker(
+                [42.255348088680904, -71.78403405778961],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_d31e0f1e2b1182c7358bd031b8e6f079 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ed42837668f9fc04aefa37d3f8a315a9 = $(`<div id="html_ed42837668f9fc04aefa37d3f8a315a9" style="width: 100.0%; height: 100.0%;">School: Saint Stephen Elementary School</div>`)[0];
+                popup_d31e0f1e2b1182c7358bd031b8e6f079.setContent(html_ed42837668f9fc04aefa37d3f8a315a9);
+            
+        
+
+        circle_marker_c5472b9d9e5a03fde688c3f4e06ad6d7.bindPopup(popup_d31e0f1e2b1182c7358bd031b8e6f079)
+        ;
+
+        
+    
+    
+            var circle_marker_927c63636dccaea21bed6d1738d8d677 = L.circleMarker(
+                [42.25588635048939, -71.7938010966121],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_30d088e51ed3b1e2f6fd13b09a971780 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_21d3dae8fc44b4b8b12430676045143b = $(`<div id="html_21d3dae8fc44b4b8b12430676045143b" style="width: 100.0%; height: 100.0%;">School: Worcester Alternative School at St. Casimir's</div>`)[0];
+                popup_30d088e51ed3b1e2f6fd13b09a971780.setContent(html_21d3dae8fc44b4b8b12430676045143b);
+            
+        
+
+        circle_marker_927c63636dccaea21bed6d1738d8d677.bindPopup(popup_30d088e51ed3b1e2f6fd13b09a971780)
+        ;
+
+        
+    
+    
+            var circle_marker_a1c588e3f2ac465fd1ce60e03b167051 = L.circleMarker(
+                [42.28261173983904, -71.82882109675774],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_4a6a6176f39bc9929934c82e7504d665 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d359e82f78e341b6392a0181dd5bd786 = $(`<div id="html_d359e82f78e341b6392a0181dd5bd786" style="width: 100.0%; height: 100.0%;">School: New Jewish Academy</div>`)[0];
+                popup_4a6a6176f39bc9929934c82e7504d665.setContent(html_d359e82f78e341b6392a0181dd5bd786);
+            
+        
+
+        circle_marker_a1c588e3f2ac465fd1ce60e03b167051.bindPopup(popup_4a6a6176f39bc9929934c82e7504d665)
+        ;
+
+        
+    
+    
+            var circle_marker_61debbe479b1842d6c75af1aaac09a29 = L.circleMarker(
+                [42.247985048280654, -71.77746098002201],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_fc1f7ccb4508f5812ede907ec3ac77f1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_023efd296ecb0c090e1e0a4730b4f722 = $(`<div id="html_023efd296ecb0c090e1e0a4730b4f722" style="width: 100.0%; height: 100.0%;">School: Rice Square School</div>`)[0];
+                popup_fc1f7ccb4508f5812ede907ec3ac77f1.setContent(html_023efd296ecb0c090e1e0a4730b4f722);
+            
+        
+
+        circle_marker_61debbe479b1842d6c75af1aaac09a29.bindPopup(popup_fc1f7ccb4508f5812ede907ec3ac77f1)
+        ;
+
+        
+    
+    
+            var circle_marker_88d09ead175c7b6b55e3c6d8006c1dd6 = L.circleMarker(
+                [42.25255867299623, -71.78345711881637],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_185a6195af8b749bc6d7c7dbd6058376 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_56333e5bdd86912f3a79b16dae00fba6 = $(`<div id="html_56333e5bdd86912f3a79b16dae00fba6" style="width: 100.0%; height: 100.0%;">School: Worcester East Middle School</div>`)[0];
+                popup_185a6195af8b749bc6d7c7dbd6058376.setContent(html_56333e5bdd86912f3a79b16dae00fba6);
+            
+        
+
+        circle_marker_88d09ead175c7b6b55e3c6d8006c1dd6.bindPopup(popup_185a6195af8b749bc6d7c7dbd6058376)
+        ;
+
+        
+    
+    
+            var circle_marker_b1c879ce24da006fc70becad311fd09a = L.circleMarker(
+                [42.27168022901881, -71.78785599136246],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_8e3dda87690c52957505240e924a6122 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9b0e2053ea2ce4eb2cf8e6d2478de6b9 = $(`<div id="html_9b0e2053ea2ce4eb2cf8e6d2478de6b9" style="width: 100.0%; height: 100.0%;">School: Belmont Street Community School</div>`)[0];
+                popup_8e3dda87690c52957505240e924a6122.setContent(html_9b0e2053ea2ce4eb2cf8e6d2478de6b9);
+            
+        
+
+        circle_marker_b1c879ce24da006fc70becad311fd09a.bindPopup(popup_8e3dda87690c52957505240e924a6122)
+        ;
+
+        
+    
+    
+            var circle_marker_5bbaedcf20c2c6ca68634b3a1c33e1fa = L.circleMarker(
+                [42.271017193946115, -71.82672058140504],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_084e8ec019927d162691bbc8fb3c731a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ceae80fbc3ef982a6ee1f7a4cd1903ef = $(`<div id="html_ceae80fbc3ef982a6ee1f7a4cd1903ef" style="width: 100.0%; height: 100.0%;">School: Midland Street School</div>`)[0];
+                popup_084e8ec019927d162691bbc8fb3c731a.setContent(html_ceae80fbc3ef982a6ee1f7a4cd1903ef);
+            
+        
+
+        circle_marker_5bbaedcf20c2c6ca68634b3a1c33e1fa.bindPopup(popup_084e8ec019927d162691bbc8fb3c731a)
+        ;
+
+        
+    
+    
+            var circle_marker_00da767b723139733eb8dc599204a41d = L.circleMarker(
+                [42.244872349656696, -71.86395544520249],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_d7b4acad78c81fb042cf24b3d5b4d5cf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6327da86ea7aee137adb66f5cc53ab41 = $(`<div id="html_6327da86ea7aee137adb66f5cc53ab41" style="width: 100.0%; height: 100.0%;">School: South High Community School</div>`)[0];
+                popup_d7b4acad78c81fb042cf24b3d5b4d5cf.setContent(html_6327da86ea7aee137adb66f5cc53ab41);
+            
+        
+
+        circle_marker_00da767b723139733eb8dc599204a41d.bindPopup(popup_d7b4acad78c81fb042cf24b3d5b4d5cf)
+        ;
+
+        
+    
+    
+            var circle_marker_543afcf8181d23ef54181644ca2ada80 = L.circleMarker(
+                [42.24361198070996, -71.86054744981587],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_430729b12868a535e1de8320c4514595 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cec72a17e4c532e5048aca64dd10c8b8 = $(`<div id="html_cec72a17e4c532e5048aca64dd10c8b8" style="width: 100.0%; height: 100.0%;">School: Dr. Arthur F. Sullivan Middle School</div>`)[0];
+                popup_430729b12868a535e1de8320c4514595.setContent(html_cec72a17e4c532e5048aca64dd10c8b8);
+            
+        
+
+        circle_marker_543afcf8181d23ef54181644ca2ada80.bindPopup(popup_430729b12868a535e1de8320c4514595)
+        ;
+
+        
+    
+    
+            var circle_marker_a76678e5595dcb1b485c57a9a509d619 = L.circleMarker(
+                [42.25430282486177, -71.81810111051657],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_52f7ef6b842e31278c1ef1704276bd5c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6019df91bc3816c422605c39d3ad84d2 = $(`<div id="html_6019df91bc3816c422605c39d3ad84d2" style="width: 100.0%; height: 100.0%;">School: Claremont Academy</div>`)[0];
+                popup_52f7ef6b842e31278c1ef1704276bd5c.setContent(html_6019df91bc3816c422605c39d3ad84d2);
+            
+        
+
+        circle_marker_a76678e5595dcb1b485c57a9a509d619.bindPopup(popup_52f7ef6b842e31278c1ef1704276bd5c)
+        ;
+
+        
+    
+    
+            var circle_marker_573a49d14604c97400f1a562ad256e61 = L.circleMarker(
+                [42.32701928505502, -71.79430611519224],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_09cb1f6f4d756bba06f2d7f58629036f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3be08e401761f396d0cfc65b8b2f7234 = $(`<div id="html_3be08e401761f396d0cfc65b8b2f7234" style="width: 100.0%; height: 100.0%;">School: Norrback Avenue School</div>`)[0];
+                popup_09cb1f6f4d756bba06f2d7f58629036f.setContent(html_3be08e401761f396d0cfc65b8b2f7234);
+            
+        
+
+        circle_marker_573a49d14604c97400f1a562ad256e61.bindPopup(popup_09cb1f6f4d756bba06f2d7f58629036f)
+        ;
+
+        
+    
+    
+            var circle_marker_3065d591eeebef3afe4672b73111beff = L.circleMarker(
+                [42.26176701655037, -71.76667931396963],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_60dfc3e38e1141a135d8dc70a7bdc8cc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_21cb113124497b8ca9e02a44fb8857e5 = $(`<div id="html_21cb113124497b8ca9e02a44fb8857e5" style="width: 100.0%; height: 100.0%;">School: North High School</div>`)[0];
+                popup_60dfc3e38e1141a135d8dc70a7bdc8cc.setContent(html_21cb113124497b8ca9e02a44fb8857e5);
+            
+        
+
+        circle_marker_3065d591eeebef3afe4672b73111beff.bindPopup(popup_60dfc3e38e1141a135d8dc70a7bdc8cc)
+        ;
+
+        
+    
+    
+            var circle_marker_b78e475d925d351e98977110c76c9ab8 = L.circleMarker(
+                [42.26632507476324, -71.79066374381397],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_af138e98bdfca4754ff6c7a66d769d98 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d7a153aa22b927ab43d367e8a09b96f4 = $(`<div id="html_d7a153aa22b927ab43d367e8a09b96f4" style="width: 100.0%; height: 100.0%;">School: City View Discovery School</div>`)[0];
+                popup_af138e98bdfca4754ff6c7a66d769d98.setContent(html_d7a153aa22b927ab43d367e8a09b96f4);
+            
+        
+
+        circle_marker_b78e475d925d351e98977110c76c9ab8.bindPopup(popup_af138e98bdfca4754ff6c7a66d769d98)
+        ;
+
+        
+    
+    
+            var circle_marker_15997fc229eb2b8bae4fed334af4ebd6 = L.circleMarker(
+                [42.28343346072119, -71.82617617522277],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_f43ce9a5a2f454362a68ccc12e2b3f8e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_019c35c4d30d02a128759063061a358a = $(`<div id="html_019c35c4d30d02a128759063061a358a" style="width: 100.0%; height: 100.0%;">School: Notre Dame Academy</div>`)[0];
+                popup_f43ce9a5a2f454362a68ccc12e2b3f8e.setContent(html_019c35c4d30d02a128759063061a358a);
+            
+        
+
+        circle_marker_15997fc229eb2b8bae4fed334af4ebd6.bindPopup(popup_f43ce9a5a2f454362a68ccc12e2b3f8e)
+        ;
+
+        
+    
+    
+            var circle_marker_979d51b1a80b66e2833398affe822f2d = L.circleMarker(
+                [42.25141758974087, -71.79044493144742],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_8551d30e8129ade428319417e2f15d5f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_78391bdcb496af10c225f2a6814e8df2 = $(`<div id="html_78391bdcb496af10c225f2a6814e8df2" style="width: 100.0%; height: 100.0%;">School: Union Hill School</div>`)[0];
+                popup_8551d30e8129ade428319417e2f15d5f.setContent(html_78391bdcb496af10c225f2a6814e8df2);
+            
+        
+
+        circle_marker_979d51b1a80b66e2833398affe822f2d.bindPopup(popup_8551d30e8129ade428319417e2f15d5f)
+        ;
+
+        
+    
+    
+            var circle_marker_ecb387ef87d46a617731c222c53638a6 = L.circleMarker(
+                [42.25648799153711, -71.78729114057221],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_6c5cbd755d276be35e545794df4688d0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3f1f9e9bd6506d9fbe666901d11007cb = $(`<div id="html_3f1f9e9bd6506d9fbe666901d11007cb" style="width: 100.0%; height: 100.0%;">School: Grafton Street School</div>`)[0];
+                popup_6c5cbd755d276be35e545794df4688d0.setContent(html_3f1f9e9bd6506d9fbe666901d11007cb);
+            
+        
+
+        circle_marker_ecb387ef87d46a617731c222c53638a6.bindPopup(popup_6c5cbd755d276be35e545794df4688d0)
+        ;
+
+        
+    
+    
+            var circle_marker_89520c34c02c125ef619bfe4ea2668df = L.circleMarker(
+                [42.25101648846269, -71.7972247683401],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_08986d1f269ac3b8a7d0b5cdc0443978 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_340cf4ed6409bb6df6b9f05216712edf = $(`<div id="html_340cf4ed6409bb6df6b9f05216712edf" style="width: 100.0%; height: 100.0%;">School: St Mary's Central</div>`)[0];
+                popup_08986d1f269ac3b8a7d0b5cdc0443978.setContent(html_340cf4ed6409bb6df6b9f05216712edf);
+            
+        
+
+        circle_marker_89520c34c02c125ef619bfe4ea2668df.bindPopup(popup_08986d1f269ac3b8a7d0b5cdc0443978)
+        ;
+
+        
+    
+    
+            var circle_marker_21c0dd4d12866455e326866c6050f553 = L.circleMarker(
+                [42.28372249294235, -71.83185190872464],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_2800dadac55dbff105b599d60e2fffb6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_963a46f65684ecaf01ed94ff6525b779 = $(`<div id="html_963a46f65684ecaf01ed94ff6525b779" style="width: 100.0%; height: 100.0%;">School: Flagg Street School</div>`)[0];
+                popup_2800dadac55dbff105b599d60e2fffb6.setContent(html_963a46f65684ecaf01ed94ff6525b779);
+            
+        
+
+        circle_marker_21c0dd4d12866455e326866c6050f553.bindPopup(popup_2800dadac55dbff105b599d60e2fffb6)
+        ;
+
+        
+    
+    
+            var circle_marker_afc9847fd5d7d2d8575e5562355a5e93 = L.circleMarker(
+                [42.24778346951259, -71.8243367931129],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_87dc3ca3ff463f37b113d4e85bb48e58 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9e4988d363a6bbb54bf65a4e6ff5aefb = $(`<div id="html_9e4988d363a6bbb54bf65a4e6ff5aefb" style="width: 100.0%; height: 100.0%;">School: Goddard School of Science and Technology</div>`)[0];
+                popup_87dc3ca3ff463f37b113d4e85bb48e58.setContent(html_9e4988d363a6bbb54bf65a4e6ff5aefb);
+            
+        
+
+        circle_marker_afc9847fd5d7d2d8575e5562355a5e93.bindPopup(popup_87dc3ca3ff463f37b113d4e85bb48e58)
+        ;
+
+        
+    
+    
+            var circle_marker_d7b748601f2a995a8e45523726464eaf = L.circleMarker(
+                [42.26899252659613, -71.82027137130471],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_8ae83c43b9de39ea86687eb1e299b6f7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1bf6fbd16915e2fcddae128425e7343e = $(`<div id="html_1bf6fbd16915e2fcddae128425e7343e" style="width: 100.0%; height: 100.0%;">School: Doherty Memorial High School</div>`)[0];
+                popup_8ae83c43b9de39ea86687eb1e299b6f7.setContent(html_1bf6fbd16915e2fcddae128425e7343e);
+            
+        
+
+        circle_marker_d7b748601f2a995a8e45523726464eaf.bindPopup(popup_8ae83c43b9de39ea86687eb1e299b6f7)
+        ;
+
+        
+    
+    
+            var circle_marker_03fa8b6a35af77f211701c0b628ad2e8 = L.circleMarker(
+                [42.26909917784454, -71.80766491277362],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_a7bda77eeea5c676ac00f3ad4f6e83ae = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_02c28fdfceb6f80f22ad757dde7b4105 = $(`<div id="html_02c28fdfceb6f80f22ad757dde7b4105" style="width: 100.0%; height: 100.0%;">School: Elm Park Community School</div>`)[0];
+                popup_a7bda77eeea5c676ac00f3ad4f6e83ae.setContent(html_02c28fdfceb6f80f22ad757dde7b4105);
+            
+        
+
+        circle_marker_03fa8b6a35af77f211701c0b628ad2e8.bindPopup(popup_a7bda77eeea5c676ac00f3ad4f6e83ae)
+        ;
+
+        
+    
+    
+            var circle_marker_bd8e6ce63437fa6d4bc4004080d8e394 = L.circleMarker(
+                [42.297248634647005, -71.78768536259781],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_354e5427d38f2a7226917c303153a42e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_75ef65da9333b8d50e7c4024c597e5ed = $(`<div id="html_75ef65da9333b8d50e7c4024c597e5ed" style="width: 100.0%; height: 100.0%;">School: Burncoat Middle & High School</div>`)[0];
+                popup_354e5427d38f2a7226917c303153a42e.setContent(html_75ef65da9333b8d50e7c4024c597e5ed);
+            
+        
+
+        circle_marker_bd8e6ce63437fa6d4bc4004080d8e394.bindPopup(popup_354e5427d38f2a7226917c303153a42e)
+        ;
+
+        
+    
+    
+            var circle_marker_21a267a7277dbfacc430ac1b1873dc5b = L.circleMarker(
+                [42.306693087862634, -71.80091102543008],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_3759cdf95a38ab152c9628bd51e396ab = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4ee9f3a5517d47cfccb802374dfacc38 = $(`<div id="html_4ee9f3a5517d47cfccb802374dfacc38" style="width: 100.0%; height: 100.0%;">School: Abby Kelley Foster Charter Public School</div>`)[0];
+                popup_3759cdf95a38ab152c9628bd51e396ab.setContent(html_4ee9f3a5517d47cfccb802374dfacc38);
+            
+        
+
+        circle_marker_21a267a7277dbfacc430ac1b1873dc5b.bindPopup(popup_3759cdf95a38ab152c9628bd51e396ab)
+        ;
+
+        
+    
+    
+            var circle_marker_565e180478c23f43d4926df4851c0cf7 = L.circleMarker(
+                [42.305531746434845, -71.81545206337996],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_d80becb3c081b6c20291f11969abe355 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_05217604bf3fee0d87cfe727a13cef82 = $(`<div id="html_05217604bf3fee0d87cfe727a13cef82" style="width: 100.0%; height: 100.0%;">School: Bancroft School</div>`)[0];
+                popup_d80becb3c081b6c20291f11969abe355.setContent(html_05217604bf3fee0d87cfe727a13cef82);
+            
+        
+
+        circle_marker_565e180478c23f43d4926df4851c0cf7.bindPopup(popup_d80becb3c081b6c20291f11969abe355)
+        ;
+
+        
+    
+    
+            var circle_marker_55de1734e86c1b54a3e24e6e334f9f82 = L.circleMarker(
+                [42.3061894983103, -71.82494287638123],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_4ac7f6b45870eba5945bd5cc001a117a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_096073117d122dfdab3d0bdd3bbf8445 = $(`<div id="html_096073117d122dfdab3d0bdd3bbf8445" style="width: 100.0%; height: 100.0%;">School: Saint Peter-Marian High School</div>`)[0];
+                popup_4ac7f6b45870eba5945bd5cc001a117a.setContent(html_096073117d122dfdab3d0bdd3bbf8445);
+            
+        
+
+        circle_marker_55de1734e86c1b54a3e24e6e334f9f82.bindPopup(popup_4ac7f6b45870eba5945bd5cc001a117a)
+        ;
+
+        
+    
+    
+            var circle_marker_3380e222f0930c2bc582881082c002ec = L.circleMarker(
+                [42.23154268519979, -71.84376805784777],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_36f44d05ad2e52d5ea89fc3dddbf5ab5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_80c8fcab79b27913b9f420a5f5f8cc03 = $(`<div id="html_80c8fcab79b27913b9f420a5f5f8cc03" style="width: 100.0%; height: 100.0%;">School: Heard Street Discovery Academy</div>`)[0];
+                popup_36f44d05ad2e52d5ea89fc3dddbf5ab5.setContent(html_80c8fcab79b27913b9f420a5f5f8cc03);
+            
+        
+
+        circle_marker_3380e222f0930c2bc582881082c002ec.bindPopup(popup_36f44d05ad2e52d5ea89fc3dddbf5ab5)
+        ;
+
+        
+    
+    
+            var circle_marker_684fcfd18a8010fa09642a2e775a962b = L.circleMarker(
+                [42.312205169456576, -71.7715874918546],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_b65caf3dcc73be28b1063384e3f17d78 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d508db88e5dd941373325ea74c0bc8d4 = $(`<div id="html_d508db88e5dd941373325ea74c0bc8d4" style="width: 100.0%; height: 100.0%;">School: Clark Street Community School</div>`)[0];
+                popup_b65caf3dcc73be28b1063384e3f17d78.setContent(html_d508db88e5dd941373325ea74c0bc8d4);
+            
+        
+
+        circle_marker_684fcfd18a8010fa09642a2e775a962b.bindPopup(popup_b65caf3dcc73be28b1063384e3f17d78)
+        ;
+
+        
+    
+    
+            var circle_marker_24ddbf5562d5e3de7674cc8dcc28b4ec = L.circleMarker(
+                [42.24044949388575, -71.79030045363454],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_a00bbe0c3d55d22bc0755a98698c4edd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_be9f5d308c47f898db6b7fe9e3305f6f = $(`<div id="html_be9f5d308c47f898db6b7fe9e3305f6f" style="width: 100.0%; height: 100.0%;">School: Vernon Hill School</div>`)[0];
+                popup_a00bbe0c3d55d22bc0755a98698c4edd.setContent(html_be9f5d308c47f898db6b7fe9e3305f6f);
+            
+        
+
+        circle_marker_24ddbf5562d5e3de7674cc8dcc28b4ec.bindPopup(popup_a00bbe0c3d55d22bc0755a98698c4edd)
+        ;
+
+        
+    
+    
+            var circle_marker_3f99ad2fd369641dc0eb765a8834693d = L.circleMarker(
+                [42.30151654460899, -71.78699000686308],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_f3f11910530e42dd8700f02f275a412b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_435349d4841f11bc35ff8a1f62684214 = $(`<div id="html_435349d4841f11bc35ff8a1f62684214" style="width: 100.0%; height: 100.0%;">School: Thorndyke Road School</div>`)[0];
+                popup_f3f11910530e42dd8700f02f275a412b.setContent(html_435349d4841f11bc35ff8a1f62684214);
+            
+        
+
+        circle_marker_3f99ad2fd369641dc0eb765a8834693d.bindPopup(popup_f3f11910530e42dd8700f02f275a412b)
+        ;
+
+        
+    
+    
+            var circle_marker_fb22afa8277476bed11d557ba4a50d7e = L.circleMarker(
+                [42.26555860984295, -71.78963704971945],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_377a103e0c3435bbb962efe53c4ce59d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1522a8f200819c1d96693f0dd8c3a405 = $(`<div id="html_1522a8f200819c1d96693f0dd8c3a405" style="width: 100.0%; height: 100.0%;">School: Seven Hills Charter Public School</div>`)[0];
+                popup_377a103e0c3435bbb962efe53c4ce59d.setContent(html_1522a8f200819c1d96693f0dd8c3a405);
+            
+        
+
+        circle_marker_fb22afa8277476bed11d557ba4a50d7e.bindPopup(popup_377a103e0c3435bbb962efe53c4ce59d)
+        ;
+
+        
+    
+    
+            var circle_marker_e1299922aa0916ceb5f1707b8e57cc98 = L.circleMarker(
+                [42.26783161954816, -71.7589827726689],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_dcb4eb5af00ee6d24ec8ae3c05f1a3c0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d48e3b99baa58d67a6454c91bea15c24 = $(`<div id="html_d48e3b99baa58d67a6454c91bea15c24" style="width: 100.0%; height: 100.0%;">School: Lake View School</div>`)[0];
+                popup_dcb4eb5af00ee6d24ec8ae3c05f1a3c0.setContent(html_d48e3b99baa58d67a6454c91bea15c24);
+            
+        
+
+        circle_marker_e1299922aa0916ceb5f1707b8e57cc98.bindPopup(popup_dcb4eb5af00ee6d24ec8ae3c05f1a3c0)
+        ;
+
+        
+    
+    
+            var circle_marker_3bfff28ac3e2526a3fc780b5e8b24ceb = L.circleMarker(
+                [42.24313259842613, -71.7573524250393],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_12732f897cc443edd31ec335677ee294 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f0b37ac6efdb5aa084d49112d94fa16b = $(`<div id="html_f0b37ac6efdb5aa084d49112d94fa16b" style="width: 100.0%; height: 100.0%;">School: Roosevelt School</div>`)[0];
+                popup_12732f897cc443edd31ec335677ee294.setContent(html_f0b37ac6efdb5aa084d49112d94fa16b);
+            
+        
+
+        circle_marker_3bfff28ac3e2526a3fc780b5e8b24ceb.bindPopup(popup_12732f897cc443edd31ec335677ee294)
+        ;
+
+        
+    
+    
+            var circle_marker_804c1f4ecdbf5b6caeb538dce42aadd0 = L.circleMarker(
+                [42.23370502798287, -71.79619274768905],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_57ffc34981f01cb5b7a85f1516540d33 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8aea61e14c538affc097b5a848e470b4 = $(`<div id="html_8aea61e14c538affc097b5a848e470b4" style="width: 100.0%; height: 100.0%;">School: Quinsigamond School</div>`)[0];
+                popup_57ffc34981f01cb5b7a85f1516540d33.setContent(html_8aea61e14c538affc097b5a848e470b4);
+            
+        
+
+        circle_marker_804c1f4ecdbf5b6caeb538dce42aadd0.bindPopup(popup_57ffc34981f01cb5b7a85f1516540d33)
+        ;
+
+        
+    
+    
+            var circle_marker_8d24d33839fa8d74120e83d1a707b8ac = L.circleMarker(
+                [42.260226336431536, -71.81080601275653],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_e878223b81d5a178f592fd9fbefb2cc9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_372b07e8cd5a67c3c645421fa964bbd7 = $(`<div id="html_372b07e8cd5a67c3c645421fa964bbd7" style="width: 100.0%; height: 100.0%;">School: Chandler Elementary Community School</div>`)[0];
+                popup_e878223b81d5a178f592fd9fbefb2cc9.setContent(html_372b07e8cd5a67c3c645421fa964bbd7);
+            
+        
+
+        circle_marker_8d24d33839fa8d74120e83d1a707b8ac.bindPopup(popup_e878223b81d5a178f592fd9fbefb2cc9)
+        ;
+
+        
+    
+    
+            var circle_marker_5dd1e4d6db8cdcd8c6d8a26ec7f76f22 = L.circleMarker(
+                [42.25719092540252, -71.81060078106778],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_e55dc29443b16cb5611a93b5f3765b82 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_44754889bde491e247c2b992b559a927 = $(`<div id="html_44754889bde491e247c2b992b559a927" style="width: 100.0%; height: 100.0%;">School: Jacob Hiatt Magnet School</div>`)[0];
+                popup_e55dc29443b16cb5611a93b5f3765b82.setContent(html_44754889bde491e247c2b992b559a927);
+            
+        
+
+        circle_marker_5dd1e4d6db8cdcd8c6d8a26ec7f76f22.bindPopup(popup_e55dc29443b16cb5611a93b5f3765b82)
+        ;
+
+        
+    
+    
+            var circle_marker_1277ea304534217df42f701ba7e8bba9 = L.circleMarker(
+                [42.24640591582129, -71.81728566793488],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_560c03daaea31e7f41626a52a9cfbed2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d4b2759674f664a7f21c519b48f03372 = $(`<div id="html_d4b2759674f664a7f21c519b48f03372" style="width: 100.0%; height: 100.0%;">School: Canterbury Street School</div>`)[0];
+                popup_560c03daaea31e7f41626a52a9cfbed2.setContent(html_d4b2759674f664a7f21c519b48f03372);
+            
+        
+
+        circle_marker_1277ea304534217df42f701ba7e8bba9.bindPopup(popup_560c03daaea31e7f41626a52a9cfbed2)
+        ;
+
+        
+    
+    
+            var circle_marker_143d47790e6ea60b539d93b2107f3ee7 = L.circleMarker(
+                [42.24309843725184, -71.84298128620112],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_05caad6afe49b048e12189dc2d8964da = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9b059c5b8e33968ad2f0b9b051ab8563 = $(`<div id="html_9b059c5b8e33968ad2f0b9b051ab8563" style="width: 100.0%; height: 100.0%;">School: Gates Lane School</div>`)[0];
+                popup_05caad6afe49b048e12189dc2d8964da.setContent(html_9b059c5b8e33968ad2f0b9b051ab8563);
+            
+        
+
+        circle_marker_143d47790e6ea60b539d93b2107f3ee7.bindPopup(popup_05caad6afe49b048e12189dc2d8964da)
+        ;
+
+        
+    
+    
+            var circle_marker_cd53d268856ff469af00bdbab5c8452c = L.circleMarker(
+                [42.252503822418646, -71.83324338816081],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_e7af8fc48922d21cc3b65a8f2205e16a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_90c56b8cda9f243cf50926ac6f0eb901 = $(`<div id="html_90c56b8cda9f243cf50926ac6f0eb901" style="width: 100.0%; height: 100.0%;">School: Columbus Park School</div>`)[0];
+                popup_e7af8fc48922d21cc3b65a8f2205e16a.setContent(html_90c56b8cda9f243cf50926ac6f0eb901);
+            
+        
+
+        circle_marker_cd53d268856ff469af00bdbab5c8452c.bindPopup(popup_e7af8fc48922d21cc3b65a8f2205e16a)
+        ;
+
+        
+    
+    
+            var circle_marker_bd88f8c9beadb7c73b2401b392db306c = L.circleMarker(
+                [42.266283553036985, -71.84059407903358],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_b35806ac34cb0b4b9624d8803438521d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0ebcdacc39e95e43a725c7d60ed8b705 = $(`<div id="html_0ebcdacc39e95e43a725c7d60ed8b705" style="width: 100.0%; height: 100.0%;">School: May Street School</div>`)[0];
+                popup_b35806ac34cb0b4b9624d8803438521d.setContent(html_0ebcdacc39e95e43a725c7d60ed8b705);
+            
+        
+
+        circle_marker_bd88f8c9beadb7c73b2401b392db306c.bindPopup(popup_b35806ac34cb0b4b9624d8803438521d)
+        ;
+
+        
+    
+    
+            var circle_marker_d08bec046e6059648ee2616d85682834 = L.circleMarker(
+                [42.27236471457667, -71.84384138593968],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_284c76279135abbdc05721d0a4869ca2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1cf07c50b93faed4edd03a9561330d8f = $(`<div id="html_1cf07c50b93faed4edd03a9561330d8f" style="width: 100.0%; height: 100.0%;">School: Chandler Magnet School</div>`)[0];
+                popup_284c76279135abbdc05721d0a4869ca2.setContent(html_1cf07c50b93faed4edd03a9561330d8f);
+            
+        
+
+        circle_marker_d08bec046e6059648ee2616d85682834.bindPopup(popup_284c76279135abbdc05721d0a4869ca2)
+        ;
+
+        
+    
+    
+            var circle_marker_4927dad9999b153f8b99bbd28cb52b3d = L.circleMarker(
+                [42.27893133099051, -71.85097808801632],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_1a955b9ed997e27fc8e9925b7218ae13 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_17b4bf4126a690df7ecc9401b75cf2d4 = $(`<div id="html_17b4bf4126a690df7ecc9401b75cf2d4" style="width: 100.0%; height: 100.0%;">School: Tatnuck Magnet School</div>`)[0];
+                popup_1a955b9ed997e27fc8e9925b7218ae13.setContent(html_17b4bf4126a690df7ecc9401b75cf2d4);
+            
+        
+
+        circle_marker_4927dad9999b153f8b99bbd28cb52b3d.bindPopup(popup_1a955b9ed997e27fc8e9925b7218ae13)
+        ;
+
+        
+    
+    
+            var circle_marker_6b0f0dabe183b4d391b3a9ac6c5680e6 = L.circleMarker(
+                [42.23914744666757, -71.85325157377494],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_a88aa078da9ed05c9965522b23b2cd41 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2800deea8c86934a7fd3addb21dcd969 = $(`<div id="html_2800deea8c86934a7fd3addb21dcd969" style="width: 100.0%; height: 100.0%;">School: Dr. James A. Caradonio New Citizens Center</div>`)[0];
+                popup_a88aa078da9ed05c9965522b23b2cd41.setContent(html_2800deea8c86934a7fd3addb21dcd969);
+            
+        
+
+        circle_marker_6b0f0dabe183b4d391b3a9ac6c5680e6.bindPopup(popup_a88aa078da9ed05c9965522b23b2cd41)
+        ;
+
+        
+    
+    
+            var circle_marker_855c1ffbe97c086750845f31195413d6 = L.circleMarker(
+                [42.32162084990488, -71.79277749397062],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_13963d6ee7d9f13a139ea7e9780f8c31 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e71276d75e106e72b18442e8b5df2140 = $(`<div id="html_e71276d75e106e72b18442e8b5df2140" style="width: 100.0%; height: 100.0%;">School: Burncoat Street Preparatory School</div>`)[0];
+                popup_13963d6ee7d9f13a139ea7e9780f8c31.setContent(html_e71276d75e106e72b18442e8b5df2140);
+            
+        
+
+        circle_marker_855c1ffbe97c086750845f31195413d6.bindPopup(popup_13963d6ee7d9f13a139ea7e9780f8c31)
+        ;
+
+        
+    
+    
+            var circle_marker_3a059269f6c9fb56137d287ba7620602 = L.circleMarker(
+                [42.29548944929043, -71.76969139608424],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_565e39807e12bbaad6d24f136816d45e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_66c16ec4635009cf3e01da4963cfd771 = $(`<div id="html_66c16ec4635009cf3e01da4963cfd771" style="width: 100.0%; height: 100.0%;">School: Lincoln Street School</div>`)[0];
+                popup_565e39807e12bbaad6d24f136816d45e.setContent(html_66c16ec4635009cf3e01da4963cfd771);
+            
+        
+
+        circle_marker_3a059269f6c9fb56137d287ba7620602.bindPopup(popup_565e39807e12bbaad6d24f136816d45e)
+        ;
+
+        
+    
+    
+            var circle_marker_4261c42f8bfd2749b65a8a9e4652d8af = L.circleMarker(
+                [42.29464056989736, -71.82162788426568],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_5d0e18e3eb1e810ce8ab8c32e4922cd3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cc14944dcae2fcd4e12a2760635404e9 = $(`<div id="html_cc14944dcae2fcd4e12a2760635404e9" style="width: 100.0%; height: 100.0%;">School: Nelson Place School</div>`)[0];
+                popup_5d0e18e3eb1e810ce8ab8c32e4922cd3.setContent(html_cc14944dcae2fcd4e12a2760635404e9);
+            
+        
+
+        circle_marker_4261c42f8bfd2749b65a8a9e4652d8af.bindPopup(popup_5d0e18e3eb1e810ce8ab8c32e4922cd3)
+        ;
+
+        
+    
+    
+            var circle_marker_d909a0e6f2435e645b2d46d2177f0448 = L.circleMarker(
+                [42.30428757575709, -71.77517461812134],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_ac1e9c62f5fd32a081c3620f1a0f0e01 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dd3e853227dc0694ab8f66e92cdca249 = $(`<div id="html_dd3e853227dc0694ab8f66e92cdca249" style="width: 100.0%; height: 100.0%;">School: Worcester Arts Magnet School</div>`)[0];
+                popup_ac1e9c62f5fd32a081c3620f1a0f0e01.setContent(html_dd3e853227dc0694ab8f66e92cdca249);
+            
+        
+
+        circle_marker_d909a0e6f2435e645b2d46d2177f0448.bindPopup(popup_ac1e9c62f5fd32a081c3620f1a0f0e01)
+        ;
+
+        
+    
+    
+            var circle_marker_853376fedc53ba12788b7c0a2ebfe1a0 = L.circleMarker(
+                [42.26217417285924, -71.80648902285152],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_0097d08c9f84b8a76ddf336bb2382bf7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b1d18894aa4e70a58f53c083d6dc8e1e = $(`<div id="html_b1d18894aa4e70a58f53c083d6dc8e1e" style="width: 100.0%; height: 100.0%;">School: nan</div>`)[0];
+                popup_0097d08c9f84b8a76ddf336bb2382bf7.setContent(html_b1d18894aa4e70a58f53c083d6dc8e1e);
+            
+        
+
+        circle_marker_853376fedc53ba12788b7c0a2ebfe1a0.bindPopup(popup_0097d08c9f84b8a76ddf336bb2382bf7)
+        ;
+
+        
+    
+    
+            var circle_marker_8c0ad5897ddc15717265cbcb8d4a08f8 = L.circleMarker(
+                [42.262800860048394, -71.80592725177563],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_b25ae226b08f869113ebbf547f63e88d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_558c468a51a0ac0a0e76333112d476be = $(`<div id="html_558c468a51a0ac0a0e76333112d476be" style="width: 100.0%; height: 100.0%;">School: nan</div>`)[0];
+                popup_b25ae226b08f869113ebbf547f63e88d.setContent(html_558c468a51a0ac0a0e76333112d476be);
+            
+        
+
+        circle_marker_8c0ad5897ddc15717265cbcb8d4a08f8.bindPopup(popup_b25ae226b08f869113ebbf547f63e88d)
+        ;
+
+        
+    
+    
+            var circle_marker_ade4b415f3599deb984d7666ca521005 = L.circleMarker(
+                [42.2627716761267, -71.80658020086724],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_3dec00b2e4a68bd81ffddf1500acaf2f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_19f92fc5ccf871a1717caee364a41716 = $(`<div id="html_19f92fc5ccf871a1717caee364a41716" style="width: 100.0%; height: 100.0%;">School: nan</div>`)[0];
+                popup_3dec00b2e4a68bd81ffddf1500acaf2f.setContent(html_19f92fc5ccf871a1717caee364a41716);
+            
+        
+
+        circle_marker_ade4b415f3599deb984d7666ca521005.bindPopup(popup_3dec00b2e4a68bd81ffddf1500acaf2f)
+        ;
+
+        
+    
+    
+            var circle_marker_140bbcd842b86b6ee3cd8cd46b9cdefe = L.circleMarker(
+                [42.26285035134035, -71.80712643298227],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_b30e9be3fec38f78532cfd756e8a069c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bb1bf9057cf5fb68427f9cd185274470 = $(`<div id="html_bb1bf9057cf5fb68427f9cd185274470" style="width: 100.0%; height: 100.0%;">School: nan</div>`)[0];
+                popup_b30e9be3fec38f78532cfd756e8a069c.setContent(html_bb1bf9057cf5fb68427f9cd185274470);
+            
+        
+
+        circle_marker_140bbcd842b86b6ee3cd8cd46b9cdefe.bindPopup(popup_b30e9be3fec38f78532cfd756e8a069c)
+        ;
+
+        
+    
+    
+            var circle_marker_1de831d71895f2667b0c7adbc9ffb39e = L.circleMarker(
+                [42.25418291072101, -71.81934629778733],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_1f503e62d9e0698171c3693b25933267 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_299f49697697e6ac1d49f33c07bbfa6b = $(`<div id="html_299f49697697e6ac1d49f33c07bbfa6b" style="width: 100.0%; height: 100.0%;">School: nan</div>`)[0];
+                popup_1f503e62d9e0698171c3693b25933267.setContent(html_299f49697697e6ac1d49f33c07bbfa6b);
+            
+        
+
+        circle_marker_1de831d71895f2667b0c7adbc9ffb39e.bindPopup(popup_1f503e62d9e0698171c3693b25933267)
+        ;
+
+        
+    
+    
+            var circle_marker_5afa617e3c6d29d9848522c560a37725 = L.circleMarker(
+                [42.271187050570276, -71.79252815469975],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_28b7b7acf544d841dbd68dc11e7771c3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0b2b31a2677cf7346e970d86cc618711 = $(`<div id="html_0b2b31a2677cf7346e970d86cc618711" style="width: 100.0%; height: 100.0%;">School: nan</div>`)[0];
+                popup_28b7b7acf544d841dbd68dc11e7771c3.setContent(html_0b2b31a2677cf7346e970d86cc618711);
+            
+        
+
+        circle_marker_5afa617e3c6d29d9848522c560a37725.bindPopup(popup_28b7b7acf544d841dbd68dc11e7771c3)
+        ;
+
+        
+    
+    
+            var circle_marker_b440c9d769fc44cd794f3dd4ac2054ef = L.circleMarker(
+                [42.27040504936993, -71.79169227274463],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_044a4edf50d2b7ea17bb0c355baa4f46 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7e52f3167fbb87fb4803ba17ddcb1b78 = $(`<div id="html_7e52f3167fbb87fb4803ba17ddcb1b78" style="width: 100.0%; height: 100.0%;">School: nan</div>`)[0];
+                popup_044a4edf50d2b7ea17bb0c355baa4f46.setContent(html_7e52f3167fbb87fb4803ba17ddcb1b78);
+            
+        
+
+        circle_marker_b440c9d769fc44cd794f3dd4ac2054ef.bindPopup(popup_044a4edf50d2b7ea17bb0c355baa4f46)
+        ;
+
+        
+    
+    
+            var circle_marker_4c894a3c448b77187e48a906343d0c25 = L.circleMarker(
+                [42.31382779999999, -71.7707002],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_431e9f01f40d3b09bd0de8425bb3b04f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9602c6c02cb5116f84c2ded377cc8858 = $(`<div id="html_9602c6c02cb5116f84c2ded377cc8858" style="width: 100.0%; height: 100.0%;">Hospital: Hospital for Behavioral Medicine</div>`)[0];
+                popup_431e9f01f40d3b09bd0de8425bb3b04f.setContent(html_9602c6c02cb5116f84c2ded377cc8858);
+            
+        
+
+        circle_marker_4c894a3c448b77187e48a906343d0c25.bindPopup(popup_431e9f01f40d3b09bd0de8425bb3b04f)
+        ;
+
+        
+    
+    
+            var circle_marker_7eac174d522e412847a193da8b3605ff = L.circleMarker(
+                [42.28529336614, -71.78984562444957],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_ff7dba7b64bb699ef650ffc19fdf5b46 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9d68289dd124d136ceb173eb28d1bea7 = $(`<div id="html_9d68289dd124d136ceb173eb28d1bea7" style="width: 100.0%; height: 100.0%;">Hospital: UMass Memorial Medical Center - Hahnemann Campus</div>`)[0];
+                popup_ff7dba7b64bb699ef650ffc19fdf5b46.setContent(html_9d68289dd124d136ceb173eb28d1bea7);
+            
+        
+
+        circle_marker_7eac174d522e412847a193da8b3605ff.bindPopup(popup_ff7dba7b64bb699ef650ffc19fdf5b46)
+        ;
+
+        
+    
+    
+            var circle_marker_703ba4c09734ba334aed474585e15daf = L.circleMarker(
+                [42.264932996609225, -71.79654272425323],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_d013283adf34f3c396f6d7f6b05def93 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_62d06daee7caea79b8e55590fe2f87bb = $(`<div id="html_62d06daee7caea79b8e55590fe2f87bb" style="width: 100.0%; height: 100.0%;">Hospital: Saint Vincent Hospital at Worcester Medical Center</div>`)[0];
+                popup_d013283adf34f3c396f6d7f6b05def93.setContent(html_62d06daee7caea79b8e55590fe2f87bb);
+            
+        
+
+        circle_marker_703ba4c09734ba334aed474585e15daf.bindPopup(popup_d013283adf34f3c396f6d7f6b05def93)
+        ;
+
+        
+    
+    
+            var circle_marker_84f9024b088c75ca96623c0dc54abd46 = L.circleMarker(
+                [42.273070534269685, -71.79227253526913],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_871150c99662922935a6c8fcae515832 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f6ed804d1c0f012135b532cd1c671d80 = $(`<div id="html_f6ed804d1c0f012135b532cd1c671d80" style="width: 100.0%; height: 100.0%;">Hospital: UMass Memorial Medical Center - Memorial Campus</div>`)[0];
+                popup_871150c99662922935a6c8fcae515832.setContent(html_f6ed804d1c0f012135b532cd1c671d80);
+            
+        
+
+        circle_marker_84f9024b088c75ca96623c0dc54abd46.bindPopup(popup_871150c99662922935a6c8fcae515832)
+        ;
+
+        
+    
+    
+            var circle_marker_631efcf91a1868a0b7daafc337299f79 = L.circleMarker(
+                [42.27664931363709, -71.76237072075146],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_a6c0084ba64125e18e0e4e488e6db6ed = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7c521306a494b2b5b023c9cffed3b9ff = $(`<div id="html_7c521306a494b2b5b023c9cffed3b9ff" style="width: 100.0%; height: 100.0%;">Hospital: UMass Memorial Medical Center - University Campus</div>`)[0];
+                popup_a6c0084ba64125e18e0e4e488e6db6ed.setContent(html_7c521306a494b2b5b023c9cffed3b9ff);
+            
+        
+
+        circle_marker_631efcf91a1868a0b7daafc337299f79.bindPopup(popup_a6c0084ba64125e18e0e4e488e6db6ed)
+        ;
+
+        
+    
+    
+            var circle_marker_3c4bc184f0d782c7a1b94869a9950f44 = L.circleMarker(
+                [42.280164951417646, -71.77022885345903],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_cb81514b70ee280f741357671b512eb1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_896ffb178797658bd0654290f1d5345b = $(`<div id="html_896ffb178797658bd0654290f1d5345b" style="width: 100.0%; height: 100.0%;">Hospital: Worcester Recovery Center and Hospital</div>`)[0];
+                popup_cb81514b70ee280f741357671b512eb1.setContent(html_896ffb178797658bd0654290f1d5345b);
+            
+        
+
+        circle_marker_3c4bc184f0d782c7a1b94869a9950f44.bindPopup(popup_cb81514b70ee280f741357671b512eb1)
+        ;
+
+        
+    
+    
+            var circle_marker_53906c2936d0534b35451c145b59d66f = L.circleMarker(
+                [42.260100757480345, -71.8357866177288],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_96dfe87af39c52b8395181fa31c98b01 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0ab8cfee78d2acdde7adbc807d4e65ec = $(`<div id="html_0ab8cfee78d2acdde7adbc807d4e65ec" style="width: 100.0%; height: 100.0%;">Hospital: Fairlawn Rehabilitation Hospital</div>`)[0];
+                popup_96dfe87af39c52b8395181fa31c98b01.setContent(html_0ab8cfee78d2acdde7adbc807d4e65ec);
+            
+        
+
+        circle_marker_53906c2936d0534b35451c145b59d66f.bindPopup(popup_96dfe87af39c52b8395181fa31c98b01)
+        ;
+
+        
+    
+    
+            var circle_marker_be40b7da55b3233e9867d061bcf41438 = L.circleMarker(
+                [42.259759020069595, -71.7963888786776],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_401878d6442eeff594830f23f8ba8737 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_461c0ce20a6aa7c3de56c2b1ec062161 = $(`<div id="html_461c0ce20a6aa7c3de56c2b1ec062161" style="width: 100.0%; height: 100.0%;">Church: Saint Johns Catholic Church</div>`)[0];
+                popup_401878d6442eeff594830f23f8ba8737.setContent(html_461c0ce20a6aa7c3de56c2b1ec062161);
+            
+        
+
+        circle_marker_be40b7da55b3233e9867d061bcf41438.bindPopup(popup_401878d6442eeff594830f23f8ba8737)
+        ;
+
+        
+    
+    
+            var circle_marker_3fbd72c873291411c779569ac8d6e876 = L.circleMarker(
+                [42.25164862047538, -71.79850988883307],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_e587b6d4b04667661332a92eaa15cb24 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_288ec3b00a0f68e66ce434f2a6cdacf8 = $(`<div id="html_288ec3b00a0f68e66ce434f2a6cdacf8" style="width: 100.0%; height: 100.0%;">Church: nan</div>`)[0];
+                popup_e587b6d4b04667661332a92eaa15cb24.setContent(html_288ec3b00a0f68e66ce434f2a6cdacf8);
+            
+        
+
+        circle_marker_3fbd72c873291411c779569ac8d6e876.bindPopup(popup_e587b6d4b04667661332a92eaa15cb24)
+        ;
+
+        
+    
+    
+            var circle_marker_a87e919e8515a08b438acde43a985ef9 = L.circleMarker(
+                [42.27447788829561, -71.80472121242532],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_5500cbcf4c9612c7c33fa54c7fe7af64 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c15234581638c6f94ba10dd77779264d = $(`<div id="html_c15234581638c6f94ba10dd77779264d" style="width: 100.0%; height: 100.0%;">Church: Armenian Church of Our Savior</div>`)[0];
+                popup_5500cbcf4c9612c7c33fa54c7fe7af64.setContent(html_c15234581638c6f94ba10dd77779264d);
+            
+        
+
+        circle_marker_a87e919e8515a08b438acde43a985ef9.bindPopup(popup_5500cbcf4c9612c7c33fa54c7fe7af64)
+        ;
+
+        
+    
+    
+            var circle_marker_83039c7e08ddb0ce837f828efee697bb = L.circleMarker(
+                [42.25483541480404, -71.8129690276726],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_3119607ee7a9a4c585021ddc6387e96c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_25ba23576f1404101bd0d67c6882f57c = $(`<div id="html_25ba23576f1404101bd0d67c6882f57c" style="width: 100.0%; height: 100.0%;">Church: Worcester Central Spanish Seventh-day Adventist Church</div>`)[0];
+                popup_3119607ee7a9a4c585021ddc6387e96c.setContent(html_25ba23576f1404101bd0d67c6882f57c);
+            
+        
+
+        circle_marker_83039c7e08ddb0ce837f828efee697bb.bindPopup(popup_3119607ee7a9a4c585021ddc6387e96c)
+        ;
+
+        
+    
+    
+            var circle_marker_483982aea9975394c377f150bab622a3 = L.circleMarker(
+                [42.24683466249735, -71.81624863413124],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_9681d5456b9afe1d5f181195f666b675 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_86566e3ce193b2fba4e3c6491ab11b77 = $(`<div id="html_86566e3ce193b2fba4e3c6491ab11b77" style="width: 100.0%; height: 100.0%;">Church: Centro Christiano Betesda</div>`)[0];
+                popup_9681d5456b9afe1d5f181195f666b675.setContent(html_86566e3ce193b2fba4e3c6491ab11b77);
+            
+        
+
+        circle_marker_483982aea9975394c377f150bab622a3.bindPopup(popup_9681d5456b9afe1d5f181195f666b675)
+        ;
+
+        
+    
+    
+            var circle_marker_50fe516707fe65956d4a89698f0d9f28 = L.circleMarker(
+                [42.30528462008919, -71.81761093767665],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_cbd987492ba1b5838cb0784b27e2728c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f872656fc50e17ac9b537bb7d098f51c = $(`<div id="html_f872656fc50e17ac9b537bb7d098f51c" style="width: 100.0%; height: 100.0%;">Church: Unitarian Universalist Church of Worcester</div>`)[0];
+                popup_cbd987492ba1b5838cb0784b27e2728c.setContent(html_f872656fc50e17ac9b537bb7d098f51c);
+            
+        
+
+        circle_marker_50fe516707fe65956d4a89698f0d9f28.bindPopup(popup_cbd987492ba1b5838cb0784b27e2728c)
+        ;
+
+        
+    
+    
+            var circle_marker_2ec657b39f88ef8d6962f782439251f5 = L.circleMarker(
+                [42.25192020516209, -71.8183887690667],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_9e7e841ccb6393df1d6032c93857191b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c8f4730ed898c08e193bb15b6c24a5e6 = $(`<div id="html_c8f4730ed898c08e193bb15b6c24a5e6" style="width: 100.0%; height: 100.0%;">Church: Pilgrim Congregational Church</div>`)[0];
+                popup_9e7e841ccb6393df1d6032c93857191b.setContent(html_c8f4730ed898c08e193bb15b6c24a5e6);
+            
+        
+
+        circle_marker_2ec657b39f88ef8d6962f782439251f5.bindPopup(popup_9e7e841ccb6393df1d6032c93857191b)
+        ;
+
+        
+    
+    
+            var circle_marker_d986d7793616bdf1f5283f4f83aa8caf = L.circleMarker(
+                [42.25046267651383, -71.82088246777813],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_2eadf1e286df0438df18ff70f8c17b84 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7ab713e236944c57eae0048f8c2ddf63 = $(`<div id="html_7ab713e236944c57eae0048f8c2ddf63" style="width: 100.0%; height: 100.0%;">Church: Saint Peters Catholic Church</div>`)[0];
+                popup_2eadf1e286df0438df18ff70f8c17b84.setContent(html_7ab713e236944c57eae0048f8c2ddf63);
+            
+        
+
+        circle_marker_d986d7793616bdf1f5283f4f83aa8caf.bindPopup(popup_2eadf1e286df0438df18ff70f8c17b84)
+        ;
+
+        
+    
+    
+            var circle_marker_e7338755ab6061986a4c3e013e791909 = L.circleMarker(
+                [42.25563210997541, -71.8283602497669],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_d6c7046920f39326a642f770b257da73 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_181807d01aa7e134d2835bf56cc4f7cf = $(`<div id="html_181807d01aa7e134d2835bf56cc4f7cf" style="width: 100.0%; height: 100.0%;">Church: nan</div>`)[0];
+                popup_d6c7046920f39326a642f770b257da73.setContent(html_181807d01aa7e134d2835bf56cc4f7cf);
+            
+        
+
+        circle_marker_e7338755ab6061986a4c3e013e791909.bindPopup(popup_d6c7046920f39326a642f770b257da73)
+        ;
+
+        
+    
+    
+            var circle_marker_c89964593719b4a68b1d5942a26b7531 = L.circleMarker(
+                [42.24612959263945, -71.83072484931238],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_53a8697c78efe29e220d3f8943304793 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0be118a4139a80bf1d346b6604debb00 = $(`<div id="html_0be118a4139a80bf1d346b6604debb00" style="width: 100.0%; height: 100.0%;">Church: Jesus Life Center United Methodist Church</div>`)[0];
+                popup_53a8697c78efe29e220d3f8943304793.setContent(html_0be118a4139a80bf1d346b6604debb00);
+            
+        
+
+        circle_marker_c89964593719b4a68b1d5942a26b7531.bindPopup(popup_53a8697c78efe29e220d3f8943304793)
+        ;
+
+        
+    
+    
+            var circle_marker_a5095f428d135264fd923a41330b2fbe = L.circleMarker(
+                [42.26176644620324, -71.84697026593365],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_4665525d2cfcf81dd9f8778361b436c9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e4a07f3968e3b270fe6a53c7e7d30e94 = $(`<div id="html_e4a07f3968e3b270fe6a53c7e7d30e94" style="width: 100.0%; height: 100.0%;">Church: Our Lady of Mercy Catholic Church</div>`)[0];
+                popup_4665525d2cfcf81dd9f8778361b436c9.setContent(html_e4a07f3968e3b270fe6a53c7e7d30e94);
+            
+        
+
+        circle_marker_a5095f428d135264fd923a41330b2fbe.bindPopup(popup_4665525d2cfcf81dd9f8778361b436c9)
+        ;
+
+        
+    
+    
+            var circle_marker_bd161d0af44594b5e7355d052b62bd8b = L.circleMarker(
+                [42.28573265154645, -71.80817162119381],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_3d410fc062184c80bfec337ff4108cc8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b79af62fc25efbee2f78b07918f87997 = $(`<div id="html_b79af62fc25efbee2f78b07918f87997" style="width: 100.0%; height: 100.0%;">Church: Immaculate Conception Church</div>`)[0];
+                popup_3d410fc062184c80bfec337ff4108cc8.setContent(html_b79af62fc25efbee2f78b07918f87997);
+            
+        
+
+        circle_marker_bd161d0af44594b5e7355d052b62bd8b.bindPopup(popup_3d410fc062184c80bfec337ff4108cc8)
+        ;
+
+        
+    
+    
+            var circle_marker_05da6e0fc7cf0396462b3c27d22eaebc = L.circleMarker(
+                [42.264135056384, -71.80947537355316],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_8085b99427f54b65114f64b7a09cac35 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_305d6ea317490a80571ffb673df1f1df = $(`<div id="html_305d6ea317490a80571ffb673df1f1df" style="width: 100.0%; height: 100.0%;">Church: Centro Cristiano Fey y Gracia Inc.</div>`)[0];
+                popup_8085b99427f54b65114f64b7a09cac35.setContent(html_305d6ea317490a80571ffb673df1f1df);
+            
+        
+
+        circle_marker_05da6e0fc7cf0396462b3c27d22eaebc.bindPopup(popup_8085b99427f54b65114f64b7a09cac35)
+        ;
+
+        
+    
+    
+            var circle_marker_1844054479be4878c84bc0a72848a23a = L.circleMarker(
+                [42.25757263771116, -71.80975570041818],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_8dd6f684125496440f4068c29b7935a2);
+        
+    
+        var popup_c1d9d1e9d061f8e4cbd496e7251c4de6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b1f147d55c8830e555338f69137ef989 = $(`<div id="html_b1f147d55c8830e555338f69137ef989" style="width: 100.0%; height: 100.0%;">YMCA/Recreation: Worcester YMCA Central Community Branch</div>`)[0];
+                popup_c1d9d1e9d061f8e4cbd496e7251c4de6.setContent(html_b1f147d55c8830e555338f69137ef989);
+            
+        
+
+        circle_marker_1844054479be4878c84bc0a72848a23a.bindPopup(popup_c1d9d1e9d061f8e4cbd496e7251c4de6)
+        ;
+
+        
+    
+</script>
+</html>
